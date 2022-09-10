@@ -5,4 +5,4 @@
 - 👯 I’m looking to collaborate on Blockchain.
 - 💬 Ask me about MERN
 - 📫 How to reach me: [mail](mailto:hello@yashodhan.co)
-- ⚡ Fun fact: Pro-Procastinator
+- ⚡ Fun fact: Pro-Procrastinator
