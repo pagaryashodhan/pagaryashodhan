@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yashodhan Pagar - Resume</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 300;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .contact-item i {
+            font-size: 1.2em;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section-title {
+            font-size: 1.5em;
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .summary {
+            font-size: 1.1em;
+            line-height: 1.8;
+            text-align: justify;
+            color: #555;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .skill-category {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #3498db;
+        }
+
+        .skill-category h4 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 1.1em;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .skill-tag {
+            background: #3498db;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: 500;
+        }
+
+        .experience-item, .project-item, .education-item {
+            margin-bottom: 30px;
+            padding: 25px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid #3498db;
+        }
+
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .item-title {
+            font-size: 1.2em;
+            color: #2c3e50;
+            font-weight: 600;
+        }
+
+        .item-company {
+            color: #3498db;
+            font-weight: 500;
+            font-size: 1.1em;
+        }
+
+        .item-duration {
+            background: #e74c3c;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: 500;
+        }
+
+        .responsibilities, .project-description {
+            list-style: none;
+        }
+
+        .responsibilities li, .project-description li {
+            padding: 5px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .responsibilities li:before, .project-description li:before {
+            content: "▶";
+            color: #3498db;
+            position: absolute;
+            left: 0;
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin: 15px 0;
+        }
+
+        .tech-tag {
+            background: #27ae60;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.85em;
+            font-weight: 500;
+        }
+
+        .certifications-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 15px;
+        }
+
+        .certification-item {
+            background: #f8f9fa;
+            padding: 15px 20px;
+            border-radius: 8px;
+            border-left: 4px solid #f39c12;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .certification-icon {
+            background: #f39c12;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2em;
+            flex-shrink: 0;
+        }
+
+        @media (max-width: 768px) {
+            .contact-info {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .item-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+            
+            .header {
+                padding: 30px 20px;
+            }
+            
+            .header h1 {
+                font-size: 2em;
+            }
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            
+            .container {
+                box-shadow: none;
+                border-radius: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Yashodhan Pagar</h1>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <span>📱</span>
+                    <span>+918888723386</span>
+                </div>
+                <div class="contact-item">
+                    <span>✉️</span>
+                    <span>yashodhanpagar@outlook.com</span>
+                </div>
+                <div class="contact-item">
+                    <span>🔗</span>
+                    <span>linkedin.com/in/yashodhanpagar</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="section">
+                <h2 class="section-title">
+                    <span>📋</span>
+                    Professional Summary
+                </h2>
+                <p class="summary">
+                    Java Developer with 1 year of hands-on corporate experience in developing robust, scalable applications using Java and related technologies. Proven ability to contribute effectively in a team setting and deliver high-quality solutions. Quick learner with strong debugging and problem-solving skills. Previously interned at Acrylic Solutions, gaining valuable real-world experience in software development.
+                </p>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">
+                    <span>🛠️</span>
+                    Technical Skills
+                </h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h4>Languages</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Java</span>
+                            <span class="skill-tag">TypeScript</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Frameworks</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Spring Boot</span>
+                            <span class="skill-tag">Hibernate</span>
+                            <span class="skill-tag">NextJS</span>
+                            <span class="skill-tag">ReactJS</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Databases</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">MySQL</span>
+                            <span class="skill-tag">PostgreSQL</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Tools & Platforms</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Git</span>
+                            <span class="skill-tag">Maven</span>
+                            <span class="skill-tag">IntelliJ IDEA</span>
+                            <span class="skill-tag">Postman</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Testing</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">JUnit</span>
+                            <span class="skill-tag">Mockito</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">
+                    <span>💼</span>
+                    Professional Experience
+                </h2>
+                
+                <div class="experience-item">
+                    <div class="item-header">
+                        <div>
+                            <div class="item-title">Associate Software Engineer</div>
+                            <div class="item-company">Accenture Solutions PVT. LTD.</div>
+                        </div>
+                        <div class="item-duration">July 2024 – Present</div>
+                    </div>
+                    <ul class="responsibilities">
+                        <li>Designed and implemented RESTful APIs used by internal and client-facing systems.</li>
+                        <li>Participated in daily Agile stand-ups and sprint planning, working with a team of 5 developers and testers.</li>
+                        <li>Improved data retrieval performance by 15% through optimized SQL queries and indexing.</li>
+                        <li>Performed thorough code reviews, introduced standardized formatting practices, and reduced UAT bugs by 20%.</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="item-header">
+                        <div>
+                            <div class="item-title">Software Development Intern</div>
+                            <div class="item-company">Acrylic Solutions PVT. LTD.</div>
+                        </div>
+                        <div class="item-duration">Oct 2022 - Mar 2023</div>
+                    </div>
+                    <ul class="responsibilities">
+                        <li>Contributed to the development of a lightweight CRM system using Java, JDBC, and Swing GUI.</li>
+                        <li>Created complex SQL queries to manage user and lead data efficiently.</li>
+                        <li>Worked closely with senior developers to debug and resolve critical issues.</li>
+                        <li>Gained hands-on exposure to the SDLC, documentation standards, and project delivery cycle.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">
+                    <span>🚀</span>
+                    Key Projects
+                </h2>
+                
+                <div class="project-item">
+                    <div class="item-header">
+                        <div class="item-title">Accenture Internal - Billing Management System</div>
+                    </div>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Java</span>
+                        <span class="tech-tag">Spring Boot</span>
+                        <span class="tech-tag">Hibernate</span>
+                        <span class="tech-tag">Oracle DB</span>
+                        <span class="tech-tag">REST APIs</span>
+                    </div>
+                    <ul class="project-description">
+                        <li>Developed and maintained modules for a client-facing Billing Management System for a Fortune 500 client.</li>
+                        <li>Implemented RESTful APIs for invoice generation, payment processing, and transaction history retrieval.</li>
+                        <li>Optimized data access layer using Hibernate caching and stored procedures, improving performance by ~30%.</li>
+                        <li>Integrated authentication and authorization using Spring Security.</li>
+                        <li>Worked in an Agile Scrum team, collaborating with testers, BAs, and other developers.</li>
+                        <li>Created documentation and user flow diagrams for key modules used by the QA and support teams.</li>
+                    </ul>
+                </div>
+
+                <div class="project-item">
+                    <div class="item-header">
+                        <div class="item-title">Schedulo: Virtual Event Coordinator</div>
+                    </div>
+                    <div class="tech-stack">
+                        <span class="tech-tag">React.js</span>
+                        <span class="tech-tag">NestJS</span>
+                        <span class="tech-tag">MongoDB</span>
+                        <span class="tech-tag">AWS</span>
+                    </div>
+                    <ul class="project-description">
+                        <li>Developed a mobile-friendly and intuitive UI using React.js, improving user engagement across devices.</li>
+                        <li>Built a scalable backend with Nest.js, efficiently managing all event-related data operations.</li>
+                        <li>Implemented core modules including event catalog, registration, payment gateway integration, and automated certificate distribution.</li>
+                        <li>Achieved 1300+ active users, marking a 116.67% increase in participation compared to the previous year.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">
+                    <span>🎓</span>
+                    Education
+                </h2>
+                
+                <div class="education-item">
+                    <div class="item-header">
+                        <div>
+                            <div class="item-title">B.Tech in Information Technology</div>
+                            <div class="item-company">Pimpri Chinchwad College of Engineering, Pune</div>
+                        </div>
+                        <div class="item-duration">Dec 2021 – May 2024</div>
+                    </div>
+                </div>
+
+                <div class="education-item">
+                    <div class="item-header">
+                        <div>
+                            <div class="item-title">Diploma in Computer Technology</div>
+                            <div class="item-company">Rajarshi Shahu Maharaj Polytechnic, Nashik</div>
+                        </div>
+                        <div class="item-duration">Jun 2018 – Aug 2021</div>
+                    </div>
+                </div>
+
+                <div class="education-item">
+                    <div class="item-header">
+                        <div>
+                            <div class="item-title">10th Grade</div>
+                            <div class="item-company">Hon. Sharad Pawar Public School, Manur</div>
+                        </div>
+                        <div class="item-duration">April 2017 – May 2018</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">
+                    <span>🏆</span>
+                    Certifications
+                </h2>
+                <div class="certifications-grid">
+                    <div class="certification-item">
+                        <div class="certification-icon">🔧</div>
+                        <span>Developing Solutions for Microsoft Azure (AZ-204)</span>
+                    </div>
+                    <div class="certification-item">
+                        <div class="certification-icon">☁️</div>
+                        <span>Azure Fundamentals (AZ-900)</span>
+                    </div>
+                    <div class="certification-item">
+                        <div class="certification-icon">📊</div>
+                        <span>Microsoft Azure Data Fundamentals (DP-900)</span>
+                    </div>
+                    <div class="certification-item">
+                        <div class="certification-icon">🔐</div>
+                        <span>Microsoft Security, Compliance, and Identity Fundamentals (SC-900)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
