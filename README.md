@@ -23,15 +23,6 @@ Engineered full GitOps automation, eliminating **100% of manual operations** and
 
 ---
 
-## 💼 Professional Experience
-**Associate Software Engineer — Accenture Solutions Pvt. Ltd.**  
-📍 Jaipur, IN | 🗓️ 1 year 1 month (Current) | Full-time  
-
-- Developed **core features** for high-scale platforms (500K+ users)  
-- Built **secure auth & API systems** for mobile applications  
-- **Optimized database queries**, improving performance by 80%+  
-- Automated cloud workflows using **GitOps**  
-
 **Tech Stack:** Java, Spring Boot, React, Node.js, AWS, Docker, Kubernetes  
 
 ---
