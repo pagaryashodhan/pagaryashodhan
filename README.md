@@ -6,23 +6,6 @@ Currently working as an **Associate Software Engineer at Accenture Solutions Pvt
 
 ---
 
-## 🌟 Featured Projects
-_Showcasing innovative solutions and technical excellence_  
-
-🔹 **E-Learning Platform (500K+ active users)**  
-Designed voucher systems, badges, certifications, microservices, and reusable React components for web and mobile apps.  
-
-🔹 **Secure Authentication System**  
-Integrated third-party APIs, implemented advanced auth flows, and strengthened API security to protect sensitive user data.  
-
-🔹 **Voucher Search Optimization**  
-Reduced query time from 8 minutes → 1.5 minutes, significantly improving user experience.  
-
-🔹 **GitOps Automation (MCMP Cloud Platform)**  
-Engineered full GitOps automation, eliminating **100% of manual operations** and streamlining customer processes.  
-
----
-
 **Tech Stack:** Java, Spring Boot, React, Node.js, AWS, Docker, Kubernetes  
 
 ---
