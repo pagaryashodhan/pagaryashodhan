@@ -337,12 +337,6 @@ body {
   padding: 0;
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-}
-
 /* Typography */
 h1,
 h2,
@@ -794,6 +788,10 @@ select.form-control {
   --z-notification: 4000;
 }
 
+html, body {
+  overflow-x: hidden;
+}
+
 /* Dark theme variables */
 [data-theme="dark"] {
   --portfolio-primary: #F1C40F;
@@ -805,7 +803,6 @@ select.form-control {
   --portfolio-border: rgba(189, 195, 199, 0.2);
   --portfolio-shadow: rgba(0, 0, 0, 0.3);
 }
-
 /* Reset and base styles */
 *,
 *::before,
@@ -3272,5 +3269,14 @@ textarea.form-control {
     width: 24px;
     height: 2px;
     background: var(--portfolio-accent);
+  }
+}
+
+@media (max-width: 1020px) {
+  .hero__content {
+    margin: 0 auto;          /* center block */
+    text-align: center;      /* center text */
+    justify-content: center; /* if flex children */
+    align-items: center;     /* if flex children */
   }
 }
